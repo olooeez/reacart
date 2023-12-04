@@ -14,7 +14,7 @@ const Fair = () => {
       <Header>
         <div>
           <h2>Olá, {name}!</h2>
-          <h3>Saldo: R$ {balance}</h3>
+          <h3>Saldo: R$ {balance.toFixed(2)}</h3>
         </div>
         <p>Encontre os melhores produtos orgânicos!</p>
       </Header>

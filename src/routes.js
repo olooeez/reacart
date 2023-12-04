@@ -4,6 +4,7 @@ import Login from "pages/Login";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { UserProvider } from "common/context/User";
 import { CartProvider } from "common/context/Cart";
+import { PaymentProvider } from "common/context/Payment";
 
 const Router = () => {
   return (
@@ -14,12 +15,14 @@ const Router = () => {
             <Login />
           </Route>
           <CartProvider>
-            <Route path="/fair">
-              <Fair />
-            </Route>
-            <Route path="/cart">
-              <Cart />
-            </Route>
+            <PaymentProvider>
+              <Route path="/fair">
+                <Fair />
+              </Route>
+              <Route path="/cart">
+                <Cart />
+              </Route>
+            </PaymentProvider>
           </CartProvider>
         </UserProvider>
       </Switch>

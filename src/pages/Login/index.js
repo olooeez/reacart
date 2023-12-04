@@ -25,7 +25,7 @@ const Login = () => {
         <Input
           type="number"
           value={balance}
-          onChange={(event) => setBalance(event.target.value)}
+          onChange={(event) => setBalance(Number.parseFloat(event.target.value))}
           startAdornment={<InputAdornment position="start">R$</InputAdornment>}
         />
       </InputContainer>
