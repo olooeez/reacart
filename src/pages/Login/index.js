@@ -33,6 +33,7 @@ const Login = () => {
         variant="contained"
         color="primary"
         onClick={() => history.push("/fair")}
+        disabled={name.length < 4 || parseFloat(balance) <= 0}
       >
         Avançar
       </Button>
